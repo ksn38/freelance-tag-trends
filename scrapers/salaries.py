@@ -66,7 +66,7 @@ def sal(items, flag):
             if len(salaries) > 0:
                 avg_sal.at[item, colmns[j]] = int(pd.Series(salaries).median())
     avg_sal['mean'] = (avg_sal['between1And3'] + avg_sal['between3And6'])/2
-    avg_sal.sort_values('mean', ascending=False).to_csv('./salaries/' + flag + '/' + str(date.today()) + '.csv')
+    avg_sal.sort_values('mean', ascending=False).to_csv('./hh/salaries/' + flag + '/' + str(date.today()) + '.csv')
     
 langs = ['Python', 'C%23', 'c%2B%2B', 'Java', 'Javascript', 'php', 'Ruby', 'Golang', '1С программист', 'Data scientist', 'Scala', 'iOS', \
          'Frontend', 'DevOps', 'ABAP', 'Android', 'Rust', 'Data engineer', 'QA', 'DBA']
