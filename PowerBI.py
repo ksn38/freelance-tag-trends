@@ -89,8 +89,8 @@ for file in files:
                                         'Integrated', 'Candidate', 'Corporate', 'Domain', 'Contracting', \
                                         'Platform', 'Processing', 'Adventurer', 'exp', 'exp.', 'Engineering'):
                 keywords.append(j)
-
-
+    
+    keywords = [i.lower() for i in keywords]
     df = pd.DataFrame(sorted(Counter(keywords).items(), key=lambda x: x[1], reverse=True), columns=['tag', 'val']).iloc[:149]
     df['norm_val'] = df.val/df.val.iloc[0]
     df['val'] = df['norm_val']

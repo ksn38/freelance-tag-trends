@@ -1,10 +1,10 @@
 import pandas as pd
 from os import listdir
 import numpy as np
-from notebooks.lower_case import lower
+from hh.lower_case import lower
 
 
-#lower('./tags/')
+#lower('./hh/tags/')
 
 def new_dead(mypath):
     head = 1000
